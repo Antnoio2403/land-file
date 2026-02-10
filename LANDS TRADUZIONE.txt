@@ -832,445 +832,442 @@ lands:
 
           #  INIZIO FEDE ##################
 
-  command:
+ command:
     menu:
-      invalid: '&cThere is no such shortcut with the name&4 {shortcut}&c.'
+      invalid: '&cNon esiste nessuna scorciatoia con il nome&4 {shortcut}&c.'
     rent:
-      max-amount: '&cYou can''t rent or buy another area in the land&4 {land}&c. &7You
-        already rented or bought the maximum amount of&3 {max} &7areas in this land.'
-      own: '&cYou can''t rent / purchase your own offers. &7To remove a offer destroy
-        the sign or shift + click at the hologram.'
-      edit: '&cYou currently can''t edit area&4 {area} &cof land&4 {land}&7, because
-        it''s rented/sold to player&3 {player}&7.'
-      tenant: '&cYou haven''t rented the area at your current position. &7Area&6 {area}
-        &7of land&2 {land} &7is not rented by you.'
-      none: '&cThe area&4 {area} &cof land&4 {land} &cat your current position is
-        not rented or bought by anyone.'
-      status: '&cThe area&4 {area} &cof land&4 {land} &cat your current position is
-        not set for rent or sale.'
+      max-amount: '&cNon puoi affittare o acquistare un''altra zona nella terra&4 {land}&c. &7Hai
+        già affittato o acquistato il numero massimo di&3 {max} &7zone in questa terra.'
+      own: '&cNon puoi affittare / acquistare le tue stesse offerte. &7Per rimuovere un''offerta distruggi
+        il cartello o premi shift + click sull''ologramma.'
+      edit: '&cAl momento non puoi modificare la zona&4 {area} &cdella terra&4 {land}&7, perché
+        è affittata/venduta al giocatore&3 {player}&7.'
+      tenant: '&cNon hai affittato la zona nella tua posizione attuale. &7La zona&6 {area}
+        &7della terra&2 {land} &7non è affittata da te.'
+      none: '&cLa zona&4 {area} &cdella terra&4 {land} &cnella tua posizione attuale
+        non è affittata o acquistata da nessuno.'
+      status: '&cLa zona&4 {area} &cdella terra&4 {land} &cnella tua posizione attuale
+        non è impostata per l''affitto o la vendita.'
       sign: |
-        &7You need to specify a sign type (2. line)
-         &81. line:&7 Lands
-         &82. line:&3 rent &7or &3sell &8[&7area&8]
+        &7Devi specificare un tipo di cartello (2ª riga)
+         &81ª riga:&7 Lands
+         &82ª riga:&3 rent &7o &3sell &8[&7area&8]
       set:
-        land: '&cYou can''t set the whole land&4 {land} &cfor rent. &7You can either
-          create subareas to set them for rent or you sell it completely (second line:
+        land: '&cNon puoi mettere l''intera terra&4 {land} &cin affitto. &7Puoi sia
+          creare sotto-zone per metterle in affitto, oppure venderla completamente (seconda riga:
           sell).'
-        already: '&cYou currently can''t set this area for rent again. &7The area&6
-          {area} &7is currently being rented by&3 {player}&7. It will expire in&5
+        already: '&cAl momento non puoi rimettere questa zona in affitto. &7La zona&6
+          {area} &7è attualmente affittata da&3 {player}&7. Scadrà tra&5
           {time}&7.'
-        sold: '&cYou can''t set a area, which has been sold, for rent. &7The area&6
-          {area} &7has been bought by player&3 {player}&7.'
-        interval: '&cThe rent interval must be shorther than the max total rent time.
-          &7Provided values - interval:&5 {interval}&7, max total time:&5 {max-time}'
+        sold: '&cNon puoi mettere in affitto una zona che è stata venduta. &7La zona&6
+          {area} &7è stata acquistata dal giocatore&3 {player}&7.'
+        interval: '&cL''intervallo di affitto deve essere più breve del tempo totale massimo di affitto.
+          &7Valori forniti - intervallo:&5 {interval}&7, tempo totale max:&5 {max-time}'
         success: |
-          &7You set area&6 {area} &7for rent. The tenant will pay&c {cost} &7each&5 {time}&7.
-            [T]&8✖ &7Remove offer: &e/{cmd} &8[CLICK][H]&7Click here to remove the rental offer.[/H][C]{cmd}[/C][/T]
+          &7Hai messo la zona&6 {area} &7in affitto. L''inquilino pagherà&c {cost} &7ogni&5 {time}&7.
+            [T]&8✖ &7Rimuovi offerta: &e/{cmd} &8[CLICK][H]&7Clicca qui per rimuovere l''offerta di affitto.[/H][C]{cmd}[/C][/T]
         invalid: |
-          &7Your line format is invalid ({line}. line)
-           &81. line:&7 Lands
-           &82. line:&7 rent &8[&7area&8]
-           &83. line:&7 TIME maxTime (not required)
-           &84. line:&7 costs (example: 5 = 5)
+          &7Il formato della riga non è valido ({line}ª riga)
+           &81ª riga:&7 Lands
+           &82ª riga:&7 rent &8[&7area&8]
+           &83ª riga:&7 TEMPO tempoMax (non richiesto)
+           &84ª riga:&7 costi (esempio: 5 = 5)
         info: |
           [NoPrefix]
-          &7&m━━━━━━━━━<━&r &5&lRent Area &7&m━>━━━━━━━━━
-          [T]&8• &7Land:&a {land} &8[CLICK][H]&7Click here to visualize this area.[/H][C]lands view here[/C][/T]
-           &8• &7Area:&6 {area}
-           &8• &7Cost:&c {cost} &7each {time}
-           &8• &8Max time: {max}
-          &7&m━━━━━━━━━<━&r &5&lRent Area &7&m━>━━━━━━━━━
+          &7&m━━━━━━━━━<━&r &5&lAffitta Zona &7&m━>━━━━━━━━━
+          [T]&8• &7Terra:&a {land} &8[CLICK][H]&7Clicca qui per visualizzare questa zona.[/H][C]lands view here[/C][/T]
+           &8• &7Zona:&6 {area}
+           &8• &7Costo:&c {cost} &7ogni {time}
+           &8• &8Tempo Max: {max}
+          &7&m━━━━━━━━━<━&r &5&lAffitta Zona &7&m━>━━━━━━━━━
       rent:
-        expire: '&cYou can''t add any more time to your rental of area&4 {area}&c.
-          &7The land&2 {land} &7removed it for rental. It will expire in&5 {time}&7.'
-        time: '&cYou can''t add any more time to your rental of area&4 {area}&c. &7The
-          land&2 {land} &7configured a maximum of&5 {max} &7in total.'
-        add: '&7You added&5 {add} &7to your rental of area&6 {area} &7for&c {cost}&7.
-          It will expire in&5 {time}&7.'
+        expire: '&cNon puoi aggiungere altro tempo al tuo affitto della zona&4 {area}&c.
+          &7La terra&2 {land} l''ha rimossa dall''affitto. Scadrà tra&5 {time}&7.'
+        time: '&cNon puoi aggiungere altro tempo al tuo affitto della zona&4 {area}&c. &7La
+          terra&2 {land} ha configurato un massimo di&5 {max} &7in totale.'
+        add: '&7Hai aggiunto&5 {add} &7al tuo affitto della zona&6 {area} &7per&c {cost}&7.
+          Scadrà tra&5 {time}&7.'
         success: |
-          &7You rented area&6 {area} &7of land&2 {land} &7for&c {cost}&7. It will expire in&5 {time}&7.
-            &8✖ &7Adding more time: Click on the sign or hologram
-            [T]&8✖ &7Cancelling rental: &e/{cmd} &8[CLICK][H]&7Click here to cancelling your rental.[/H][C]{cmd}[/C][/T]
+          &7Hai affittato la zona&6 {area} &7della terra&2 {land} &7per&c {cost}&7. Scadrà tra&5 {time}&7.
+            &8✖ &7Per aggiungere tempo: Clicca sul cartello o sull''ologramma
+            [T]&8✖ &7Per annullare l''affitto: &e/{cmd} &8[CLICK][H]&7Clicca qui per annullare il tuo affitto.[/H][C]{cmd}[/C][/T]
         info: |
           [NoPrefix]
-          &7&m━━━━━━━━━<━&r &5&lRented Info &7&m━>━━━━━━━━━
-          [T]&8• &7Land:&a {land} &8[CLICK][H]&7Click here to visualize this area.[/H][C]lands view here[/C][/T]
-           &8• &7Area:&6 {area}
-           &8• &7Tenant: {player}
-           &8• &7Time left:&5 {left}
-           &8• &8Rent: {cost} each {time}
-          &7&m━━━━━━━━━<━&r &5&lRented Info &7&m━>━━━━━━━━━
+          &7&m━━━━━━━━━<━&r &5&lInfo Affitto &7&m━>━━━━━━━━━
+          [T]&8• &7Terra:&a {land} &8[CLICK][H]&7Clicca qui per visualizzare questa zona.[/H][C]lands view here[/C][/T]
+           &8• &7Zona:&6 {area}
+           &8• &7Inquilino: {player}
+           &8• &7Tempo rimasto:&5 {left}
+           &8• &8Affitto: {cost} ogni {time}
+          &7&m━━━━━━━━━<━&r &5&lInfo Affitto &7&m━>━━━━━━━━━
       cancel:
-        success: '&7You cancelled the rental of area&6 {area}&7. You no longer have
-          access to this area.'
+        success: '&7Hai annullato l''affitto della zona&6 {area}&7. Non hai più
+          accesso a questa zona.'
       remove:
         offer:
           success:
-            land: '&7Land&2 {land} &7is no longer able to be purchased.'
-            area: '&7Area&6 {area} &7of land&2 {land} &7is no longer able to be rented
-              or purchased. Existing tenants will stay until their rent time expires.'
+            land: '&7La terra&2 {land} &7non è più disponibile per l''acquisto.'
+            area: '&7La zona&6 {area} &7della terra&2 {land} &7non è più disponibile per l''affitto
+              o l''acquisto. Gli inquilini attuali rimarranno fino alla scadenza del loro tempo.'
         tenant:
           confirm: |
-            &cPlease confirm that you want to pay&4 {cost} &cas compensation to the tenant&4 {player} &cin order to remove them:
-              [T]&2✔ Confirm: &e/{cmd} &8[CLICK][H]&7Click here to confirm this action and payment.[/H][C]{cmd}[/C][/T]
-          success: '&7You removed the tenant&3 {player} &7from area&6 {area} &7of
-            land&2 {land} &7and paid&c {cost} &7as compensation.'
-          target: '&cYou''ve been removed as a tenant from the area&4 {area} &4of
-            land&4 {land}&c. &7They paid&c {compensation} &7as compensation to you.'
+            &cConferma di voler pagare&4 {cost} &ccome risarcimento all''inquilino&4 {player} &cper poterlo rimuovere:
+              [T]&2✔ Conferma: &e/{cmd} &8[CLICK][H]&7Clicca qui per confermare questa azione e il pagamento.[/H][C]{cmd}[/C][/T]
+          success: '&7Hai rimosso l''inquilino&3 {player} &7dalla zona&6 {area} &7della
+            terra&2 {land} &7e pagato&c {cost} &7come risarcimento.'
+          target: '&cSei stato rimosso come inquilino dalla zona&4 {area} &4della
+            terra&4 {land}&c. &7Ti sono stati pagati&c {compensation} &7come risarcimento.'
     sell:
       sell:
-        rented: '&cYou can''t sell a area, which is being rented by a player. &7The
-          area&6 {area} &7is currently being rented by&3 {player}&7. It will expire
-          in&5 {time}&7.'
+        rented: '&cNon puoi vendere una zona che è attualmente affittata da un giocatore. &7La
+          zona&6 {area} &7è attualmente affittata da&3 {player}&7. Scadrà
+          tra&5 {time}&7.'
         success:
           area: |
-            &7You set area&6 {area} &7for sale. Cost:&c {cost}
-              [T]&8✖ &7Remove offer: &e/{cmd}[H]&7Click to remove this offer.[/H][C]{cmd}[/C][/T]
+            &7Hai messo la zona&6 {area} &7in vendita. Costo:&c {cost}
+              [T]&8✖ &7Rimuovi offerta: &e/{cmd}[H]&7Clicca per rimuovere questa offerta.[/H][C]{cmd}[/C][/T]
           land: |
-            &7You set the whole land&2 {land} &7for sale. Cost:&c {cost}
-              [T]&8✖ &7Remove offer: &e/{cmd}[H]&7Click to remove this offer.[/H][C]{cmd}[/C][/T]
+            &7Hai messo l''intera terra&2 {land} &7in vendita. Costo:&c {cost}
+              [T]&8✖ &7Rimuovi offerta: &e/{cmd}[H]&7Clicca per rimuovere questa offerta.[/H][C]{cmd}[/C][/T]
         invalid: |
-          &7Your line format is invalid ({line}. line)
-           &81. line:&7 Lands
-           &82. line:&7 sell &8[&7area&8]
-           &83. line:&7 costs (example: 5 = 5)
+          &7Il formato della riga non è valido ({line}ª riga)
+           &81ª riga:&7 Lands
+           &82ª riga:&7 sell &8[&7area&8]
+           &83ª riga:&7 costi (esempio: 5 = 5)
       buy:
-        owner-cooldown: '&cThe owner of a land can change every&4 {cooldown}&c. &7You
-          must wait another&5 {time} &7before the land&2 {land} &7can be purchased.'
+        owner-cooldown: '&cL''proprietario di una terra può cambiare ogni&4 {cooldown}&c. &7Devi
+          aspettare ancora&5 {time} &7prima che la terra&2 {land} &7possa essere acquistata.'
         success:
-          area: '&7You bought area&6 {area} &7of land&2 {land} &7for&c {cost}&7.'
-          land: '&7You bought the land&2 {land} &7for&c {cost}&7.'
+          area: '&7Hai acquistato la zona&6 {area} &7della terra&2 {land} &7per&c {cost}&7.'
+          land: '&7Hai acquistato la terra&2 {land} &7per&c {cost}&7.'
         info:
           area: |
             [NoPrefix]
-            &7&m━━━━━━━━━<━&r &5&lBuy Area &7&m━>━━━━━━━━━
-            [T]&7Land:&a {land} &8[CLICK][H]&7Click here to visualize this area.[/H][C]lands view here[/C][/T]
-             &7Area:&6 {area}
-             &7Cost:&c {cost}
-            &7&m━━━━━━━━━<━&r &5&lBuy Area &7&m━>━━━━━━━━━
+            &7&m━━━━━━━━━<━&r &5&lAcquista Zona &7&m━>━━━━━━━━━
+            [T]&7Terra:&a {land} &8[CLICK][H]&7Clicca qui per visualizzare questa zona.[/H][C]lands view here[/C][/T]
+             &7Zona:&6 {area}
+             &7Costo:&c {cost}
+            &7&m━━━━━━━━━<━&r &5&lAcquista Zona &7&m━>━━━━━━━━━
           land: |
             [NoPrefix]
-            &7&m━━━━━━━━━<━&r &5&lBuy Land &7&m━>━━━━━━━━━
-            [T]&7Land:&a {land} &8[CLICK][H]&7Click here to visualize this land.[/H][C]lands view[/C][/T]
-            &7Cost:&c {cost}
-            &7&m━━━━━━━━━<━&r &5&lBuy Land &7&m━>━━━━━━━━━
+            &7&m━━━━━━━━━<━&r &5&lAcquista Terra &7&m━>━━━━━━━━━
+            [T]&7Terra:&a {land} &8[CLICK][H]&7Clicca qui per visualizzare questa terra.[/H][C]lands view[/C][/T]
+            &7Costo:&c {cost}
+            &7&m━━━━━━━━━<━&r &5&lAcquista Terra &7&m━>━━━━━━━━━
       sold: |
         [NoPrefix]
-        &7---------<- &5&lArea Sold &7->---------
-        [T]&7Land:&a {land} &8[CLICK][H]&7Click here to visualize this area.[/H][C]lands view here[/C][/T]
-         &7Area:&6 {area}
-         &7Sold to&3 {player} &7for&c {cost}&7.
-        &7---------<- &5&lArea Sold &7->---------
+        &7---------<- &5&lZona Venduta &7->---------
+        [T]&7Terra:&a {land} &8[CLICK][H]&7Clicca qui per visualizzare questa zona.[/H][C]lands view here[/C][/T]
+         &7Zona:&6 {area}
+         &7Venduta a&3 {player} &7per&c {cost}&7.
+        &7---------<- &5&lZona Venduta &7->---------
     general:
-      no-permission: '&cYou don''t have permission to do this. &8You need permission
+      no-permission: '&cNon hai il permesso di farlo. &8Ti serve il permesso
         {permission}.'
-      not-exist: '&cThere is no such land or nation with the name&4 {object}&c. &7Typo?'
-      land-not-exist: '&cThe land&2 {land} &cdoesn''t exist. &7There''s no land with
-        this name.'
-      area-not-exist: '&cArea&4 {area} &cdoes not exist in land&4 {land}&c. &7You
-        can create a new area in your land menu in the areas section. &7Typo?'
+      not-exist: '&cNon esiste nessuna terra o nazione con il nome&4 {object}&c. &7Errore di battitura?'
+      land-not-exist: '&cLa terra&2 {land} &cnon esiste. &7Non c''è nessuna terra con
+        questo nome.'
+      area-not-exist: '&cLa zona&4 {area} &cnon esiste nella terra&4 {land}&c. &7Puoi
+        creare una nuova zona nel menu della terra nella sezione zone. &7Errore di battitura?'
       noaccess:
-        untrusted: '&cYou''re not trusted in land&4 {land}&c. &7Use &e/lands menu
-          &7to see the lands you''re a member of.'
-        land: '&cYou''re not allowed to do this for this land&4 {land}&c. &8Flag:
+        untrusted: '&cNon sei tra i membri fidati della terra&4 {land}&c. &7Usa &e/lands menu
+          &7per vedere le terre di cui fai parte.'
+        land: '&cNon ti è permesso farlo per questa terra&4 {land}&c. &8Flag:
           {flag}'
-        owner: '&cYou''re not allowed to do this for the land&4 {land}&c. &7Only the
-          land owner can do this. &7Select your own land &8(/&elands edit &8<&eland&8>)
-          &7or create one &8(/&elands create &8<&ename&8>)&7.'
-        area: '&cYou''re not allowed to do this in the area&4 {area} &cof land&4 {land}&c.'
+        owner: '&cNon ti è permesso farlo per la terra&4 {land}&c. &7Solo il
+          proprietario può farlo. &7Seleziona la tua terra &8(/&elands edit &8<&eland&8>)
+          &7o creane una &8(/&elands create &8<&ename&8>)&7.'
+        area: '&cNon ti è permesso farlo nella zona&4 {area} &cdella terra&4 {land}&c.'
         position:
-          flag: '&cYou''re not allowed to do this for the land&4 {land} &cat your
-            current position. &8Flag: {flag}'
-          untrusted: '&cYou''re not allowed to do this for the land&4 {land} &cat
-            your current position. &7You''re not trusted in this land.'
-      no-edit-land: '&cYou haven''t selected your edit land yet. &7Use &e/lands edit
-        &8<&eland&8> &7to select it.'
+          flag: '&cNon ti è permesso farlo per la terra&4 {land} &cnella tua
+            posizione attuale. &8Flag: {flag}'
+          untrusted: '&cNon ti è permesso farlo per la terra&4 {land} &cnella
+            tua posizione attuale. &7Non sei tra i membri fidati di questa terra.'
+      no-edit-land: '&cNon hai ancora selezionato la terra da modificare. &7Usa &e/lands edit
+        &8<&eland&8> &7per selezionarla.'
       object:
         name:
-          exist: '&cThe name or tag&4 {name} &cis already taken. &7You need to choose
-            a different one.'
-          same: '&cThe name&4 {name} &cis already set. &7It''s the same name as the
-            one that is currently set.'
+          exist: '&cIl nome o il tag&4 {name} &cè già occupato. &7Devi sceglierne
+            uno diverso.'
+          same: '&cIl nome&4 {name} &cè già impostato. &7È lo stesso nome di quello
+            attualmente in uso.'
         tag:
-          name: '&cThe tag can''t be the same as the name&4 {name}&c.'
-          same: '&cThe tag&4 {tag} &cis already set. &7It''s the same tag as the one
-            that is currently set.'
-      swear-word: '&cDetected a swear word. &7Please do not use mature language. Word:&c
+          name: '&cIl tag non può essere uguale al nome&4 {name}&c.'
+          same: '&cIl tag&4 {tag} &cè già impostato. &7È lo stesso tag di quello
+            attualmente in uso.'
+      swear-word: '&cRilevata una parola volgare. &7Per favore, non usare un linguaggio inappropriato. Parola:&c
         {word}'
       action:
-        cooldown: '&cYou can''t do this now. &7You need to wait&5 {time}&7.'
-        spam: '&cYou currently have another command or action processing. &7Please
-          wait until it''s complete and do not spam commands. &8Action: {action}'
-      wilderness: '&cThere''s no claimed land at your current position. &7Please go
-        into your land first, in order to execute this action. &7You can use &e/view
-        &7to visualize claims around you.'
-      player-self: '&cYou can''t do that with yourself.'
-      banks-disabled: '&7Banks were disabled by an administrator. &8They can enable
-        it in the config.'
-      land-not-trusted: '&cPlayer&4 {player} &7isn''t part of the land&4 {land}&c.
-        You need to trust him first using &e/lands trust&7.'
-      area-not-trusted: '&cYou can''t do that here. &7You''re not trusted in area&6
-        {area} &7of land&2 {land}&7.'
-      number: '&cYour input&4 {input} &cisn''t a number. &7The argument&3 {argument}
-        &7needs to be a number.'
+        cooldown: '&cNon puoi farlo ora. &7Devi aspettare&5 {time}&7.'
+        spam: '&cHai già un altro comando o azione in fase di elaborazione. &7Per favore
+          attendi il completamento e non spammare comandi. &8Azione: {action}'
+      wilderness: '&cNon c''è nessuna terra rivendicata nella tua posizione attuale. &7Per favore vai
+        prima nella tua terra per eseguire questa azione. &7Puoi usare &e/view
+        &7per visualizzare le zone rivendicate intorno a te.'
+      player-self: '&cNon puoi farlo a te stesso.'
+      banks-disabled: '&7Le banche sono state disabilitate da un amministratore. &8Possono abilitarle
+        nella configurazione.'
+      land-not-trusted: '&cIl giocatore&4 {player} &7non fa parte della terra&4 {land}&c.
+        Devi prima aggiungerlo tra i membri fidati usando &e/lands trust&7.'
+      area-not-trusted: '&cNon puoi farlo qui. &7Non sei tra i membri fidati della zona&6
+        {area} &7della terra&2 {land}&7.'
+      number: '&cIl valore&4 {input} &cnon è un numero. &7L''argomento&3 {argument}
+        &7deve essere un numero.'
       none: |
-        &cYou're not a member of any land.
-          [T]&8✖ &7Create your own: &e/{cmd} &8[CLICK][H]&7Click to copy.[/H][SC]{cmd}[/SC][/T]
-             &7Any land can invite you using: &e/lands trust
+        &cNon sei membro di alcuna terra.
+          [T]&8✖ &7Crea la tua: &e/{cmd} &8[CLICK][H]&7Clicca per copiare.[/H][SC]{cmd}[/SC][/T]
+              &7Qualsiasi terra può invitarti usando: &e/lands trust
       name:
-        number: '&cYou''re not allowed to use numbers for this name. &7Please use
-          only letters. Found number:&3 {invalid}'
-        reserved: '&cThe name&4 {reserved}&c is reserved for other purposes. &7Please
-          choose a different name.'
-        character: '&cYou can''t use invalid characters for the name. &7Please use
-          only letters and numbers. &7Found invalid character:&3 {invalid}'
-        color: '&cYou''re not allowed to use color codes in this name. &7Please remove
-          any color codes from your input.'
-        format: '&cYou''re not allowed to use formatting, such as bold text etc.,
-          in this name. &7Please remove any formatting from your input.'
-        length: '&cThis name is too long. &7The max length is&3 {max} &7characters
-          &8(&7yours: {input}&8)&7. Please provide a shorter name.'
-        empty: '&cThis name is invalid. &7You need to enter at least one character
-          other than color codes.'
+        number: '&cNon ti è permesso usare numeri per questo nome. &7Per favore usa
+          solo lettere. Numero trovato:&3 {invalid}'
+        reserved: '&cIl nome&4 {reserved}&c è riservato per altri scopi. &7Per favore
+          scegli un nome diverso.'
+        character: '&cNon puoi usare caratteri non validi per il nome. &7Per favore usa
+          solo lettere e numeri. &7Trovato carattere non valido:&3 {invalid}'
+        color: '&cNon ti è permesso usare codici colore in questo nome. &7Per favore rimuovi
+          i codici colore dal tuo input.'
+        format: '&cNon ti è permesso usare formattazione, come il grassetto ecc.,
+          in questo nome. &7Per favore rimuovi la formattazione dal tuo input.'
+        length: '&cQuesto nome è troppo lungo. &7La lunghezza massima è&3 {max} &7caratteri
+          &8(&7il tuo: {input}&8)&7. Per favore inserisci un nome più breve.'
+        empty: '&cQuesto nome non è valido. &7Devi inserire almeno un carattere
+          oltre ai codici colore.'
       money:
-        fallback: '&7Notice:&c {cost} &7has been taken from your personal account,
-          because the bank of your land&2 {land} &7does not have enough money inside
-          it. Deposit: &e/{cmd}[T]&8[CLICK][H]&7Click here to deposit money into the
-          bank of land {land}.[/H][SC]{cmd}[/SC][/T]'
+        fallback: '&7Avviso:&c {cost} &7sono stati prelevati dal tuo conto personale,
+          perché la banca della tua terra&2 {land} &7non ha abbastanza denaro al suo
+          interno. Deposita: &e/{cmd}[T]&8[CLICK][H]&7Clicca qui per depositare denaro nella
+          banca della terra {land}.[/H][SC]{cmd}[/SC][/T]'
         failure:
-          bank: '&cYou don''t have enough money in the land bank to pay the cost.
-            &7Deposit&c {cost} &7into your land bank: [T]&e/{cmd} &8[CLICK][H]&7Click
-            here to deposit {cost} into your land bank.[/H][C]{cmd}[/C][/T]'
-          personal: '&cYou don''t have enough to pay the cost. &7You need&c {cost}&7.
-            Your balance: {balance}'
+          bank: '&cNon hai abbastanza denaro nella banca della terra per pagare il costo.
+            &7Deposita&c {cost} &7nella banca della terra: [T]&e/{cmd} &8[CLICK][H]&7Clicca
+            qui per depositare {cost} nella banca della terra.[/H][C]{cmd}[/C][/T]'
+          personal: '&cNon hai abbastanza denaro per pagare il costo. &7Ti servono&c {cost}&7.
+            Il tuo bilancio: {balance}'
       input:
         confirm: |
-          &7Please confirm this action &8(&e/{input}&8) &7by clicking below:
-            [T]&2✔ Confirm: &e/{fullcmd} &8[CLICK][H]&7Click here to confirm this action.[/H][C]{fullcmd}[/C][/T]
-        land: '&cThe land&4 {input} &cdoesn''t exist. &7There''s no land with this
-          name.'
-        nation: '&cThe nation&4 {input} &cdoesn''t exist. &7There''s no nation with
-          this name.'
-        holder: '&cThere is not such land or nation with the name&4 {input}&c. &7Typo?'
-        number: '&cYour input&4 {input} &cisn''t a number. &7Argument {pos}: {expected}'
-        category: '&cYour input&4 {input} &cisn''t a category. &7Argument {pos}: {expected}'
-        funds: '&cYour input&4 {input} &cdoesn''t match any currency. &7Argument {pos}:
+          &7Per favore conferma questa azione &8(&e/{input}&8) &7cliccando qui sotto:
+            [T]&2✔ Conferma: &e/{fullcmd} &8[CLICK][H]&7Clicca qui per confermare questa azione.[/H][C]{fullcmd}[/C][/T]
+        land: '&cLa terra&4 {input} &cnon esiste. &7Non c''è nessuna terra con questo
+          nome.'
+        nation: '&cLa nazione&4 {input} &cnon esiste. &7Non c''è nessuna nazione con
+          questo nome.'
+        holder: '&cNon esiste nessuna terra o nazione con il nome&4 {input}&c. &7Errore di battitura?'
+        number: '&cIl valore&4 {input} &cnon è un numero. &7Argomento {pos}: {expected}'
+        category: '&cIl valore&4 {input} &cnon è una categoria. &7Argomento {pos}: {expected}'
+        funds: '&cIl valore&4 {input} &cnon corrisponde a nessuna valuta. &7Argomento {pos}:
           {expected}'
-        player: '&cThere''s no player with the name&4 {input}&c. &7Typo?'
-        offline: '&cThere''s currently no player with the name&4 {input} &conline.
-          &7Typo?'
-        world: '&cThe world&4 {input} &cdoesn''t exist. &7Argument {pos}: {expected}'
-        permission: '&cYour input&4 {input} &cisn''t a lands limit permission. &7Argument
+        player: '&cNon c''è nessun giocatore con il nome&4 {input}&c. &7Errore di battitura?'
+        offline: '&cAl momento non c''è nessun giocatore chiamato&4 {input} &conline.
+          &7Errore di battitura?'
+        world: '&cIl mondo&4 {input} &cnon esiste. &7Argomento {pos}: {expected}'
+        permission: '&cIl valore&4 {input} &cnon è un permesso valido per i limiti delle terre. &7Argomento
           {pos}: {expected}'
         world-disabled:
-          general: '&cThis is deactivated in this world.[V] &8World: {input}[/V]'
-          claiming: '&cClaiming is disabled in the world you''re currently in. &7Enter
-            a world where claiming is enabled first.[V] &7You need to add it to the
-            claim-worlds-list option in the config file. &8Current world: {input}[/V]'
-        time: '&cYour input&4 {input} &cdoesn''t represent time. &7Argument {pos}:
-          {expected}. Correct example: 1h'
+          general: '&cQuesta funzione è disattivata in questo mondo.[V] &8Mondo: {input}[/V]'
+          claiming: '&cLa rivendicazione (claiming) è disabilitata nel mondo in cui ti trovi. &7Entra
+            in un mondo dove è abilitata prima di procedere.[V] &7Devi aggiungerlo alla
+            lista claim-worlds-list nel file di configurazione. &8Mondo attuale: {input}[/V]'
+        time: '&cIl valore&4 {input} &cnon rappresenta un formato di tempo. &7Argomento {pos}:
+          {expected}. Esempio corretto: 1h'
     create:
-      land-other: '&cYou''re not allowed to have your own land and be a member of
-        another land. &7You need to leave land&2 {land} &7first.'
+      land-other: '&cNon ti è permesso avere una tua terra ed essere contemporaneamente membro di
+        un''altra terra. &7Devi prima lasciare la terra&2 {land}&7.'
       max:
-        land: '&cYou can''t create any more lands. &7You reached your maximum of&3
-          {max} &7own lands.'
-        camp: '&cYou can''t create any more camps. &7You reached your maximum of&3
-          {max} &7camps.'
+        land: '&cNon puoi creare altre terre. &7Hai raggiunto il tuo massimo di&3
+          {max} &7terre personali.'
+        camp: '&cNon puoi creare altri accampamenti. &7Hai raggiunto il tuo massimo di&3
+          {max} &7accampamenti.'
       success:
         land: |
-          &7Successfully created land&2 {land} &7for&c {cost}&7.
-          Set land {land} &7as your edit land for future actions.
-            [T]&7✖ Change edit land: &e/{cmd_edit} &8[CLICK][SC]{cmd_edit}[/SC][H]&7Land {land} has been set as your edit land for actions like trusting players etc. To change that execute this command. Click to copy.[/H][/T]
-            [T]&7✖ Claim chunk: &e/{cmd_claim} &8[CLICK][C]{cmd_claim}[/C][H]&7Click here to claim the chunk you're standing in.[/H][/T]
-            [T]&7✖ Claim selection: &e/{cmd_selection} &8[CLICK][C]{cmd_selection}[/C][H]&7Click here to claim a selection of chunks.[/H][/T]
-            [T]&7✖ Trust players: &e/{cmd_trust} &8[CLICK][SC]{cmd_trust}[/SC][H]&7Click to copy.[/H][/T]
-        camp: '&7You created the camp&2 {land} &7at your current position. &7You paid&c
-          {cost}&7. The camp can''t be expanded and will expire in&5 {time}&7.'
-      broadcast: '&7Land&2 {land} &7was created by&3 {player}&7.'
+          &7Hai creato con successo la terra&2 {land} &7per&c {cost}&7.
+          La terra {land} &7è stata impostata come terra in modifica per le azioni future.
+            [T]&7✖ Cambia terra in modifica: &e/{cmd_edit} &8[CLICK][SC]{cmd_edit}[/SC][H]&7La terra {land} è stata impostata per azioni come l''aggiunta di membri ecc. Per cambiare usa questo comando. Clicca per copiare.[/H][/T]
+            [T]&7✖ Rivendica chunk: &e/{cmd_claim} &8[CLICK][C]{cmd_claim}[/C][H]&7Clicca qui per rivendicare il chunk in cui ti trovi.[/H][/T]
+            [T]&7✖ Rivendica selezione: &e/{cmd_selection} &8[CLICK][C]{cmd_selection}[/C][H]&7Clicca qui per rivendicare una selezione di chunk.[/H][/T]
+            [T]&7✖ Aggiungi membri: &e/{cmd_trust} &8[CLICK][SC]{cmd_trust}[/SC][H]&7Clicca per copiare.[/H][/T]
+        camp: '&7Hai creato l''accampamento&2 {land} &7nella tua posizione attuale. &7Hai pagato&c
+          {cost}&7. L''accampamento non può essere espanso e scadrà tra&5 {time}&7.'
+      broadcast: '&7La terra&2 {land} &7è stata creata da&3 {player}&7.'
     rename:
-      success: '&7Successfully set the new name&3 {name} &7for the land&2 {land}&7.
-        You paid&c {cost}&7.'
+      success: '&7Nuovo nome&3 {name} &7impostato con successo per la terra&2 {land}&7.
+        Hai pagato&c {cost}&7.'
     edit:
-      success: '&7You entered the edit mode for the land&2 {land}&7. Next actions,
-        like &e/lands claim &7or &e/lands trust&7, will be executed for this land.'
+      success: '&7Sei entrato in modalità modifica per la terra&2 {land}&7. Le prossime azioni,
+        come &e/lands claim &7o &e/lands trust&7, saranno eseguite per questa terra.'
     selection:
-      max: '&cYour selection has too many chunks in it. &7Size:&3 {current} &7Your
-        maximum size is&3 {max} &7chunks.'
-      too-far: '&cThe block you''re looking at is too far away. &7Please move closer
-        to it.'
-      world: '&cBoth positions must be in the same world. &7Please set position one
-        and position two in the same world.'
+      max: '&cLa tua selezione contiene troppi chunk. &7Dimensione:&3 {current} &7Il tuo
+        massimo consentito è di&3 {max} &7chunk.'
+      too-far: '&cIl blocco che stai guardando è troppo lontano. &7Per favore avvicinati.'
+      world: '&cEntrambe le posizioni devono essere nello stesso mondo. &7Per favore imposta
+        la posizione uno e due nello stesso mondo.'
       pos:
-        warn: '&cWarning: &7This chunk belongs to another management plugin. Name:&3
+        warn: '&cAttenzione: &7Questo chunk appartiene a un altro plugin di gestione. Nome:&3
           {plugin}'
-        cancelled: '&cYou can''t set a selection here. &7This chunk belongs to another
-          management plugin. Name:&3 {plugin}'
+        cancelled: '&cNon puoi creare una selezione qui. &7Questo chunk appartiene a un altro
+          plugin di gestione. Nome:&3 {plugin}'
       area:
-        conflicts: '&cFound&4 {conflicts} &cconflict(s) with chunks already assigned
-          to area(s). &7Use &e/lands selection assign {area} confirm &7to confirm
-          the override. Conflicts belong to these areas: {areas}'
+        conflicts: '&cTrovati&4 {conflicts} &cconflitti con chunk già assegnati
+          ad altre zone. &7Usa &e/lands selection assign {area} confirm &7per confermare
+          e sovrascrivere. I conflitti appartengono a queste zone: {areas}'
       expand:
-        y: '&7Expanded the selection''s lowest point by&3 {y-min} &7and the highest
-          point by&3 {y-max}&7.'
-        enabled: '&7Expanded your selection from bottom to the top (min and max claim
-          height).'
-        disabled: '&7Your selection isn''t any longer expanded from bottom to the
-          top.'
+        y: '&7Espanso il punto più basso della selezione di&3 {y-min} &7e il punto più alto
+          di&3 {y-max}&7.'
+        enabled: '&7Selezione espansa dal basso verso l''alto (altezza minima e massima di claim).'
+        disabled: '&7La tua selezione non è più espansa dal basso verso l''alto.'
       status:
-        complete: '#t#&6Selection Complete[newline]&7Claim: &e&l/claim &7Unclaim:
-          &e&l/unclaim[newline]&6&lAssign selection to a subarea: &e&l/assign'
-        progress: '#t#&6Selection[newline]&7Left: {first} &7Right: {second}[newline]&6&lSet
-          corner: &6left/right click or drop item &7&lCancel: &7Change tool slot'
-        reminder: |
-          &7Selection is complete: Following actions can be executed:
-            [T]&7✖ Claim: &e/claim &8[CLICK][H]&7Click here to claim this selection.[/H][C]lands claim[/C][/T]
-            [T]&7✖ Unclaim: &e/unclaim &8[CLICK][H]&7Click here to unclaim this selection.[/H][C]lands unclaim[/C][/T]
-            [T]&7✖ Subarea: &e/assign &8[CLICK][H]&7Assign this selection to a subarea.[/H][SC]lands assign <area>[/SC][/T]
-        not-complete: '&cYour selection is not complete. &7Please make sure that both
-          positions are set. [T]&7You can toggle the selection mode by executing &e/lands
-          selection &8[CLICK][H]&7Click here to toggle the selection mode.[/H][C]lands
+        complete: '#t#&6Selezione Completata[newline]&7Rivendica: &e&l/claim &7Rimuovi:
+          &e&l/unclaim[newline]&6&lAssegna selezione a una sotto-zona: &e&l/assign'
+        progress: '#t#&6Selezione[newline]&7Sinistra: {first} &7Destra: {second}[newline]&6&lImposta
+          angolo: &6click sx/dx o rilascia oggetto &7&lAnnulla: &7Cambia slot strumento'
+      reminder: |
+          &7Selezione completata: Puoi eseguire le seguenti azioni:
+            [T]&7✖ Rivendica (Claim): &e/claim &8[CLICK][H]&7Clicca qui per rivendicare questa selezione.[/H][C]lands claim[/C][/T]
+            [T]&7✖ Rimuovi (Unclaim): &e/unclaim &8[CLICK][H]&7Clicca qui per rimuovere la rivendicazione.[/H][C]lands unclaim[/C][/T]
+            [T]&7✖ Sotto-zona: &e/assign &8[CLICK][H]&7Assegna questa selezione a una sotto-zona.[/H][SC]lands assign <area>[/SC][/T]
+        not-complete: '&cLa tua selezione non è completa. &7Assicurati che entrambe le
+          posizioni siano impostate. [T]&7Puoi attivare la modalità selezione eseguendo &e/lands
+          selection &8[CLICK][H]&7Clicca qui per attivare la modalità selezione.[/H][C]lands
           selection[/C][/T]'
-        disabled: '#t#&6Selection[newline]&cMode disabled'
+        disabled: '#t#&6Selezione[newline]&cModalità disabilitata'
     claim:
       camp: |
-        &cYour camp&4 {land} &ccan't be expanded.
-          [T]&7✖ Change land: &e/lands edit &8<&eland&8> &8[CLICK][SC]lands edit[/SC][H]&7Click to copy this command.[/H][/T]
+        &cIl tuo accampamento&4 {land} &cnon può essere espanso.
+          [T]&7✖ Cambia terra: &e/lands edit &8<&eland&8> &8[CLICK][SC]lands edit[/SC][H]&7Clicca per copiare questo comando.[/H][/T]
       create:
         auto: |
-          &7Automatically created a new land&2 {land}&7, because you didn't have one for which you could claim.
-            [T]&7✖ Rename: &e/lands rename &8<&ename&8> &8[CLICK][SC]lands rename[/SC][H]&7Click to copy this command.[/H][/T]
+          &7È stata creata automaticamente una nuova terra&2 {land}&7, perché non ne avevi una con cui rivendicare.
+            [T]&7✖ Rinomina: &e/lands rename &8<&ename&8> &8[CLICK][SC]lands rename[/SC][H]&7Clicca per copiare questo comando.[/H][/T]
         force_near: |
-          &7Automatically created a new land&2 {land}&7, because your previous one wouldn't be connected to this claim.
-            [T]&7✖ Rename: &e/lands rename &8<&ename&8> &8[CLICK][SC]lands rename[/SC][H]&7Click to copy this command.[/H][/T]
+          &7È stata creata automaticamente una nuova terra&2 {land}&7, perché quella precedente non sarebbe stata collegata a questa rivendicazione.
+            [T]&7✖ Rinomina: &e/lands rename &8<&ename&8> &8[CLICK][SC]lands rename[/SC][H]&7Clicca per copiare questo comando.[/H][/T]
       region:
-        chunk: '&cYou can''t claim land here. &7This chunk already belongs to another
-          region management plugin: {plugin}'
-        selection: '&cYou can''t claim this selection. &7It contains parts of a region
-          from another region management plugin: {plugin}'
-      war: '&cYou can''t claim while being engaged in a war against {object}&c.'
-      already: '&cYou can''t claim this chunk. &7It already belongs to land&2 {land}&7.'
+        chunk: '&cNon puoi rivendicare terreno qui. &7Questo chunk appartiene già a un altro
+          plugin di gestione regioni: {plugin}'
+        selection: '&cNon puoi rivendicare questa selezione. &7Contiene parti di una regione
+          di un altro plugin di gestione regioni: {plugin}'
+      war: '&cNon puoi rivendicare terreno mentre sei in guerra contro {object}&c.'
+      already: '&cNon puoi rivendicare questo chunk. &7Appartiene già alla terra&2 {land}&7.'
       initial:
-        world: "&cFor land&4 {land} &cyou can only claim in the world, in which you\
-          \ initially created it &8(&4{world}&8)&c. &7You may want to create another\
-          \ land for the world you're currently in &8(&7{current}&8)&7. \n  [T]&7✖\
-          \ Create: &e/lands create &8<&ename&8> &8[CLICK][SC]lands create[/SC][H]&7Click\
-          \ to copy this command.[/H][/T]\n"
-        server: "&cFor land&4 {land} &cyou can only claim in the server, in which\
-          \ you initially created it &8(&4{server}&8)&c. &7You may want to create\
-          \ another land for the server you're currently in &8(&7{current}&8)&7. \n\
-          \  [T]&7✖ Create: &e/lands create &8<&ename&8> &8[CLICK][SC]lands create[/SC][H]&7Click\
-          \ to copy this command.[/H][/T]\n"
+        world: "&cPer la terra&4 {land} &cpuoi rivendicare solo nel mondo in cui\
+          \ l'hai creata inizialmente &8(&4{world}&8)&c. &7Potrebbe essere necessario creare un'altra\
+          \ terra per il mondo in cui ti trovi ora &8(&7{current}&8)&7. \n  [T]&7✖\
+          \ Crea: &e/lands create &8<&ename&8> &8[CLICK][SC]lands create[/SC][H]&7Clicca\
+          \ per copiare questo comando.[/H][/T]\n"
+        server: "&cPer la terra&4 {land} &cpuoi rivendicare solo nel server in cui\
+          \ l'hai creata inizialmente &8(&4{server}&8)&c. &7Potrebbe essere necessario creare\
+          \ un'altra terra per il server in cui ti trovi ora &8(&7{current}&8)&7. \n\
+          \  [T]&7✖ Crea: &e/lands create &8<&ename&8> &8[CLICK][SC]lands create[/SC][H]&7Clicca\
+          \ per copiare questo comando.[/H][/T]\n"
       chunk-distance:
-        land: '&cThis is too near to land&4 {land}&c. &7The minimum distance around
-          lands, that aren''t part of a nation, is&3 {distance} chunk(s)&7.'
-        nation: '&cThis is too near to land&4 {land}&c. &7The minimum distance is&3
-          {distance} chunk(s)&7, because they''re part of a nation.'
+        land: '&cQuesto è troppo vicino alla terra&4 {land}&c. &7La distanza minima intorno
+          alle terre che non fanno parte di una nazione è di&3 {distance} chunk&7.'
+        nation: '&cQuesto è troppo vicino alla terra&4 {land}&c. &7La distanza minima è di&3
+          {distance} chunk&7, perché fanno parte di una nazione.'
       force-near:
-        far-land: '&cYou can''t claim this chunk(s). &7Your claims need to be connected
-          to your land&2 {land}&7.'
-        parts: '&cYou can''t claim this chunk(s). &7Your claims need to be connected
-          to your land&2 {land}&7, because it reached its limit of &c{max} &7disconnected
-          parts.'
-      success: '&7Successfully claimed this chunk &8(&7Land:&2 {land} &7X: {x} Z:
-        {z}&8) &7for&c {cost}&7. Next claim will cost&c {next}&7.'
-      already-claimed: '&cIn your selection is a chunk that is already claimed and
-        does not belong to your land &8(&7X: {x} Z: {z}&8)&c. &7It belongs to land&2
+        far-land: '&cNon puoi rivendicare questo chunk. &7Le tue rivendicazioni devono essere collegate
+          alla tua terra&2 {land}&7.'
+        parts: '&cNon puoi rivendicare questo chunk. &7Le tue rivendicazioni devono essere collegate
+          alla tua terra&2 {land}&7, perché ha raggiunto il limite di &c{max} &7parti
+          scollegate.'
+      success: '&7Chunk rivendicato con successo &8(&7Terra:&2 {land} &7X: {x} Z:
+        {z}&8) &7per&c {cost}&7. Il prossimo claim costerà&c {next}&7.'
+      already-claimed: '&cNella tua selezione è presente un chunk già rivendicato che
+        non appartiene alla tua terra &8(&7X: {x} Z: {z}&8)&c. &7Appartiene alla terra&2
         {land}&7.'
-      max-chunk: '&cYou can''t claim&4 {chunks} &cmore chunks for this land. &7The
-        maximum for land&2 {land} &7is&3 {max} &7chunks.[V] &8Permission: lands.chunks.<number>[/V]'
+      max-chunk: '&cNon puoi rivendicare altri&4 {chunks} &cchunk per questa terra. &7Il
+        massimo per la terra&2 {land} &7è di&3 {max} &7chunk.[V] &8Permesso: lands.chunks.<numero>[/V]'
       selection:
-        success: '&7You successfully claimed&3 {chunks} &7chunks for your land&2 {land}&7.
-          You paid&c {cost}&7.'
+        success: '&7Hai rivendicato con successo&3 {chunks} &7chunk per la tua terra&2 {land}&7.
+          Hai pagato&c {cost}&7.'
       radius:
-        success: '&7You successfully claimed&3 {chunks} &7chunks in the radius of&7
-          {radius} &7chunks around you for your land&2 {land}&7. You paid&c {cost}&7.'
+        success: '&7Hai rivendicato con successo&3 {chunks} &7chunk in un raggio di&7
+          {radius} &7chunk intorno a te per la tua terra&2 {land}&7. Hai pagato&c {cost}&7.'
       fill:
-        none: '&cCouldn''t find shape. &7Please make sure you stand in an unclaimed
-          region that is surrunded by your claim.'
-        success: '&7You successfully claimed&3 {chunks} &7chunks for your land&2 {land}
-          &7in order to fill the shape you stood in. You paid&c {cost}&7.'
+        none: '&cImpossibile trovare una forma chiusa. &7Assicurati di trovarti in una zona
+          non rivendicata circondata dai tuoi territori.'
+        success: '&7Hai rivendicato con successo&3 {chunks} &7chunk per la tua terra&2 {land}
+          &7riempiendo l''area in cui ti trovavi. Hai pagato&c {cost}&7.'
     merge:
       confirm: |
-        &7Please confirm that you want to merge land&2 {merge} &7into&2 {land}&7 for &c{cost}&7:
-          [T]&2✔ Confirm: &e/{fullcmd} &8[CLICK][H]&7Click here to confirm this action.[/H][C]{fullcmd}[/C][/T]
-      same: '&cYou can''t merge land&4 {merge} &cinto itself. &7Please specify a different
-        land.'
-      already: '&cYou already requested the land&4 {merge}&c to be merged into your
-        land&4 {land}&c.'
-      cost: '&cThe land&4 {land}&c currently can''t pay the cost of&4 {cost}&c for
-        the merge.'
+        &7Conferma di voler unire la terra&2 {merge} &7nella terra&2 {land}&7 per &c{cost}&7:
+          [T]&2✔ Conferma: &e/{fullcmd} &8[CLICK][H]&7Clicca qui per confermare l''azione.[/H][C]{fullcmd}[/C][/T]
+      same: '&cNon puoi unire la terra&4 {merge} &ccon se stessa. &7Specifica una terra
+        differente.'
+      already: '&cHai già richiesto che la terra&4 {merge}&c venga unita alla tua
+        terra&4 {land}&c.'
+      cost: '&cLa terra&4 {land}&c al momento non può pagare il costo di&4 {cost}&c per
+        l''unione.'
       max:
-        chunks: '&cYou can''t merge land&4 {merge} &cinto&4 {land}&c. &7Their total
-          amount of&3 {chunks} &7chunks exceeds the limit of&3 {max} &7chunks for
-          your land&2 {land}&7.'
-      connection: '&cYou can''t merge land&4 {merge} &cinto&4 {land}&c. &7Their claims
-        aren''t connected in world&3 {world}&7.'
+        chunks: '&cNon puoi unire la terra&4 {merge} &ca&4 {land}&c. &7Il loro numero
+          totale di&3 {chunks} &7chunk supera il limite di&3 {max} &7chunk per
+          la tua terra&2 {land}&7.'
+      connection: '&cNon puoi unire la terra&4 {merge} &ca&4 {land}&c. &7I loro territori
+        non sono collegati nel mondo&3 {world}&7.'
       nation: |
-        &cYou can't merge land&4 {merge} &cinto&4 {land}&c. &7Land&2 {merge} &7is the capital of nation&9 {nation}&7.
-          [T]&7✖ Change capital: &e/nations setcapital &8<&eland&8>[H]&7Click here to change the nations capital. This will allow you to merge land {merge}. Click to copy.[/H][SC]nations setcapital[/SC][/T]
-      requested: '&7You successfully requested&3 {player}&7 to merge their land&2
-        {merge} &7into your land&2 {land}&7. They can now respond to your request.'
-      success: '&7Successfully merged land&2 {merge}&7 into&2 {land}&7 for&c {cost}&7.'
+        &cNon puoi unire la terra&4 {merge} &ca&4 {land}&c. &7La terra&2 {merge} &7è la capitale della nazione&9 {nation}&7.
+          [T]&7✖ Cambia capitale: &e/nations setcapital &8<&eland&8>[H]&7Clicca qui per cambiare la capitale della nazione. Questo ti permetterà di unire la terra {merge}. Clicca per copiare.[/H][SC]nations setcapital[/SC][/T]
+      requested: '&7Hai richiesto con successo a&3 {player}&7 di unire la sua terra&2
+        {merge} &7nella tua terra&2 {land}&7. Ora può rispondere alla tua richiesta.'
+      success: '&7Terra&2 {merge}&7 unita con successo a&2 {land}&7 per&c {cost}&7.'
     assign:
-      selection: '&cYou need to create a selection first. &7Use &e/lands selection
-        &7to create one. After that try again.'
-      default: '&cYou can''t assign the selection to a default area. &7Areas can be
-        deleted in the areas menu of the land.'
-      confirm: |
-        &cYour selection has a low height. &7Sub areas, unlike claims, have a height and do not extend from the bottom to the top by default.
-          [T] &7✖ Proceed: &e/{cmd_confirm} &8[CLICK][H]&7Click here to proceed.[/H][C]{cmd_confirm}[/C][/T]
-          [T] &7✖ Expand fully: &e/{cmd_expand} &8[CLICK][H]&7Click here to expand the selection from the bottom to the top of the claim.[/H][C]{cmd_expand}[/C][/T]
-      size: '&cYour selection is too small. &7The minimum size is&3 {min} &7blocks
-        and yours is&3 {current}&7.'
-      success: '&7You successfully resized the area&6 {area} &7of land&2 {land}&7.
-        Changes are visualized.'
+      selection: '&cDevi prima creare una selezione. &7Usa &e/lands selection
+        &7per crearne una. Dopodiché riprova.'
+      default: '&cNon puoi assegnare la selezione a una zona predefinita (default). &7Le zone possono essere
+        eliminate nel menu zone della terra.'
+     confirm: |
+        &cLa tua selezione ha un'altezza ridotta. &7Le sotto-zone, a differenza dei claim, hanno un'altezza definita e non si estendono dal basso verso l'alto per impostazione predefinita.
+          [T] &7✖ Procedi: &e/{cmd_confirm} &8[CLICK][H]&7Clicca qui per procedere.[/H][C]{cmd_confirm}[/C][/T]
+          [T] &7✖ Espandi tutto: &e/{cmd_expand} &8[CLICK][H]&7Clicca qui per espandere la selezione dal basso verso l'alto del claim.[/H][C]{cmd_expand}[/C][/T]
+      size: '&cLa tua selezione è troppo piccola. &7La dimensione minima è di&3 {min} &7blocchi
+        e la tua è di&3 {current}&7.'
+      success: '&7Hai ridimensionato con successo la zona&6 {area} &7della terra&2 {land}&7.
+        Le modifiche sono state visualizzate.'
       conflict:
-        land: '&cYour selection conflicts with land&4 {land}&c. &7Please adjust your
-          selection.'
-        area: '&cYour selection conflicts with area&4 {area}&c. &7Please adjust your
-          selection.'
+        land: '&cLa tua selezione è in conflitto con la terra&4 {land}&c. &7Per favore modifica la tua
+          selezione.'
+        area: '&cLa tua selezione è in conflitto con la zona&4 {area}&c. &7Per favore modifica la tua
+          selezione.'
     leave:
       owner: |
-        &cYou can't leave this land. &7As the owner of a land you can delete the land or just transfer the ownership.
-          [T]&c✘ Delete &8[CLICK][C]lands delete[/C][H]&7Click to delete land&2 {land}&7.[/H][/T]
-          [T]&2✔ Transfer ownership &8[CLICK][SC]lands setowner [/SC][H]&7Click to copy this command.[/H][/T]
+        &cNon puoi lasciare questa terra. &7In quanto proprietario, puoi eliminare la terra o trasferirne la proprietà.
+          [T]&c✘ Elimina &8[CLICK][C]lands delete[/C][H]&7Clicca per eliminare la terra&2 {land}&7.[/H][/T]
+          [T]&2✔ Trasferisci proprietà &8[CLICK][SC]lands setowner [/SC][H]&7Clicca per copiare questo comando.[/H][/T]
       land:
-        untrusted: '&7You aren''t trusted in any areas of land&2 {land}&7.'
-        success: '&7Successfully left the whole land&2 {land}&7.'
+        untrusted: '&7Non sei tra i membri fidati in nessuna zona della terra&2 {land}&7.'
+        success: '&7Hai lasciato con successo l''intera terra&2 {land}&7.'
       area:
-        untrusted: '&7You aren''t trusted in area&6 {area} &7of the land&2 {land}&7.'
-        success: '&7Successfully left the area&6 {area} &7of the land&2 {land}&7.'
+        untrusted: '&7Non sei tra i membri fidati nella zona&6 {area} &7della terra&2 {land}&7.'
+        success: '&7Hai lasciato con successo la zona&6 {area} &7della terra&2 {land}&7.'
       confirm: |
-        &7Please confirm that you want to leave the whole land&2 {land} &7by clicking below:
-          [T]&2✔ Confirm: &e/{fullcmd} &8[CLICK][H]&7Click here to confirm this action.[/H][C]{fullcmd}[/C][/T]
+        &7Conferma di voler lasciare l''intera terra&2 {land} &7cliccando qui sotto:
+          [T]&2✔ Conferma: &e/{fullcmd} &8[CLICK][H]&7Clicca qui per confermare questa azione.[/H][C]{fullcmd}[/C][/T]
     unclaim:
-      rental: '&cYou can''t unclaim this chunk&7, because it contains the rented or
-        sold area&6 {area}&7. Remove the tenant&3 {player}&7: &e/{cmd}'
-      split: '&cYou can''t unclaim this chunk, because this would cause your land
-        to split up into parts. &7Parts that would split up are now visualized.'
-      success: '&7Successfully unclaimed this chunk &8(&7Land:&2 {land} &7X: {x} Z:
-        {z}&8)&7. You got&c {back} &7back.'
+      rental: '&cNon puoi rimuovere questo chunk&7, perché contiene la zona affittata o
+        venduta&6 {area}&7. Rimuovi l''inquilino&3 {player}&7: &e/{cmd}'
+      split: '&cNon puoi rimuovere questo chunk, perché questo causerebbe la divisione della tua terra
+        in più parti. &7Le parti che si dividerebbero sono ora visualizzate.'
+      success: '&7Chunk rimosso con successo &8(&7Terra:&2 {land} &7X: {x} Z:
+        {z}&8)&7. Hai ricevuto&c {back} &7indietro.'
       all:
-        success: '&7You successfully unclaimed all chunks for land&2 {land} &7and
-          got&3 {back} &7back.'
+        success: '&7Hai rimosso con successo tutti i claim per la terra&2 {land} &7e
+          hai ricevuto&3 {back} &7indietro.'
         confirm: |
-          &7Please confirm that you want to unclaim all claims of land&2 {land}&7:
-            [T]&2✔ Confirm: &e/{fullcmd} &8[CLICK][H]&7Click here to confirm this action.[/H][C]{fullcmd}[/C][/T]
+          &7Conferma di voler rimuovere tutti i claim della terra&2 {land}&7:
+            [T]&2✔ Conferma: &e/{fullcmd} &8[CLICK][H]&7Clicca qui per confermare questa azione.[/H][C]{fullcmd}[/C][/T]
       selection:
-        empty: '&cYou did not unclaim any chunks, because they are not claimed or
-          you''re not allowed to unclaim any of them.'
-        rental: '&cYou can''t unclaim this selection&7, because it contains the rented
-          or sold area&6 {area} &7of land&2 {land}&7. Remove the tenant&3 {player}&7:
+        empty: '&cNon hai rimosso alcun chunk, perché non sono rivendicati o
+          non hai il permesso di rimuoverli.'
+        rental: '&cNon puoi rimuovere questa selezione&7, perché contiene la zona affittata
+          o venduta&6 {area} &7della terra&2 {land}&7. Rimuovi l''inquilino&3 {player}&7:
           &e/{cmd}'
-        split: '&7You unclaimed {success} / {size} chunks of this selection, &cbut
-          {failed} could not be unclaimed because it would result in your land being
-          split up into parts &8(a admin can disable this in config)&7. Parts that
-          would split up are now visualized. You got&c {back} &7back.'
-        partly: '&7You successfully unclaimed {success} / {size} chunks of this selection.
-          You got&c {back} &7back.'
-        success: '&7You successfully unclaimed all chunks of this selection. You got&c
-          {back} &7back.'
+        split: '&7Hai rimosso {success} / {size} chunk di questa selezione, &cma
+          {failed} non è stato possibile rimuoverli perché la terra verrebbe
+          divisa in più parti &8(un admin può disattivarlo nella config)&7. Le parti che
+          si dividerebbero sono ora visualizzate. Hai ricevuto&c {back} &7indietro.'
+        partly: '&7Hai rimosso con successo {success} / {size} chunk di questa selezione.
+          Hai ricevuto&c {back} &7indietro.'
+        success: '&7Hai rimosso con successo tutti i chunk di questa selezione. Hai ricevuto&c
+          {back} &7indietro.'
 
           #  INIZIO PEPPESALA ##################
 
