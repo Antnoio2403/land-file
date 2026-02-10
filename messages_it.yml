@@ -1,0 +1,8 @@
+# Traduzione del plugin Lands (Italiano)
+
+## Generale
+welcome_message: "Benvenuto in Lands!"
+farewell_message: "Arrivederci!"
+
+## Aiuto
+help_message: "Usa /lands per ottenere informazioni sui comandi del plugin."
