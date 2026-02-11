@@ -13,7 +13,7 @@ general:
   wNo: '&cNo'
   disabled: '&cDisabilitato'
   wilderness: '&aTerra Selvaggia'
-  server: Server
+  server: VoidCraft
   affiliation:
     land: '&8[&2{land}&8]'
     nation: '&8[&9{nation} &8|&2 {land}&8]'
@@ -23,11 +23,11 @@ general:
     neutral: '&7Neutrale'
   land:
     title:
-      camp: '&7accampamento di&3 %owner%&7.'
+      camp: '&7Accampamento di&3 %owner%&7.'
       admin: '&7Questo territorio appartiene al server.'
       land:
-        normal: '&7%level% &7of&3 %owner%&7.'
-        levels-disabled: '&7of&3 %owner%&7.'
+        normal: '&7%level% &7di&3 %owner%&7.'
+        levels-disabled: '&7di&3 %owner%&7.'
     default-area: Default
   area:
     description:
@@ -179,40 +179,31 @@ general:
       others: '&7Non sei abilitato in questa terra. Clicca per mostrare le informazioni
         sulla terra&3 {land}&7.'
       position: '&7Questa è la tua posizione attuale.'
-  inbox:
+inbox:
     general:
       created: '&7Terra {0} &7creata.'
       post: '{0}: {1}'
-      renamed: '&7{0} changed the name from {1} to {2}.'
+      renamed: '&7{0} ha cambiato il nome da {1} a {2}.'
     member:
       join: '&7Il giocatore {0} è entrato.'
-      owner: '&7Player {0} is now the new owner.'
+      owner: '&7{0} è il nuovo proprietario.'
       remove:
-        left: '&7Player {0} left.'
-        unclaimed: "&7Player {0} left. {1} chunk(s) that they claimed were unclaimed
-          because the land owner can't claim any more."
-        banned: '&cPlayer {0} has been banned.'
+        left: '&7{0} è uscito.'
+        unclaimed: "&7Il giocatore {0} è uscito. {1} chunk che aveva reclamato sono stati liberati perché il proprietario della terra non può reclamarne altri."
+        banned: '&cIl giocatore {0} è stato bannato.'
     economy:
       upkeep:
         warning: '&cImpossibile pagare i costi di manutenzione: {0}'
-        unclaim: '&cImpossibile pagare il costo completo di manutenzione di {0}. Gli
-          ultimi {1} chunk reclamati verranno liberati.'
+        unclaim: '&cImpossibile pagare il costo completo di manutenzione di {0}. Gli ultimi {1} chunk reclamati verranno liberati.'
         paid: '&7Costo di manutenzione pagato: {0}'
-        nation: '&cLa nazione {0} non è riuscita a pagare la manutenzione di {1},
-          dal loro saldo di capitali, ed è stata eliminata.'
+        nation: '&cLa nazione {0} non è riuscita a pagare la manutenzione di {1} dal saldo della capitale ed è stata eliminata.'
         alert:
           land:
-            normal: '&cYou need to pay&4 {0}&c in upkeep in {1}, but {2} has insufficient
-              funds.'
-            delete: '&cYou need to pay&4 {0}&c in upkeep in {1}, but {2} has insufficient
-              funds. &7This will lead to at least some of the latest claims being
-              unclaimed. Make sure to deposit some money to prevent this from happening.'
+            normal: '&cDevi pagare&4 {0}&c di manutenzione in {1}, ma {2} ha fondi insufficienti.'
+            delete: '&cDevi pagare&4 {0}&c di manutenzione in {1}, ma {2} ha fondi insufficienti. &7Questo porterà alla liberazione degli ultimi chunk reclamati. Deposita del denaro per evitare che accada.'
           nation:
-            normal: '&cYou need to pay&4 {0}&c in upkeep in {1}, but {2} has insufficient
-              funds.'
-            delete: '&cYou need to pay&4 {0}&c in upkeep in {1}, but {2} has insufficient
-              funds. &7This will lead to the nation being deleted. Make sure to deposit
-              some money to prevent this from happening.'
+            normal: '&cDevi pagare&4 {0}&c di manutenzione in {1}, ma {2} ha fondi insufficienti.'
+            delete: '&cDevi pagare&4 {0}&c di manutenzione in {1}, ma {2} ha fondi insufficienti. &7Questo porterà all''eliminazione della nazione. Deposita del denaro per evitare che accada.'
       bank:
         withdraw: '&cIl giocatore {0} ha prelevato {1}. Nuovo bilancio: {2}'
         deposit: '&7Il giocatore {0} ha depositato {1}. Nuovo bilancio: {2}'
@@ -269,8 +260,7 @@ general:
         accepted: '&7Non siamo più nemici di {0}&7.'
     storage:
       entry: '&r{item}&r x {amount}'
-      message: '&7Player {0} modified the storage. Items taken: {1}&7 - Items added:
-        {2}'
+      message: '&7Il giocatore {0} ha modificato il deposito. Oggetti prelevati: {1}&7 - Oggetti aggiunti: {2}'
   wars:
     object:
       enemy: '&cNemico'
@@ -281,60 +271,59 @@ general:
     state:
       preparation: '&aPreparazione'
       fight: '&cLotta'
-  command:
+command:
     argument:
       optional: '&8<&e{arg}&8>'
       required: '&8[&e{arg}&8]'
       type:
         land: terra
-        cmd: cmd
+        cmd: comando
         area: area
         player: giocatore
         name: nome
         confirm: conferma
         funds: fondi
-        menu: menù
+        menu: menu
         world: mondo
         args: argomenti
         page: pagina
         database: database
-        holder: terra o nazione
+        holder: terra_o_nazione
         plugin: plugin
         role: ruolo
         flag: flag
-        radius: radius
-        context: context
-        boolean: true | false
-        flag_or_all: flag | all
-        nation: nation
-        amount: amount
-        tribute: tribute
-        y-min: y-min
-        y-max: y-max
-        silent: silent
-        sorting: sorting
-        number: number
-        preparation_time: preparation time
-        category: category
-        ally: ally
-        enemy: enemy
-        here: here
-        land_or_here: land | here
+        radius: raggio
+        context: contesto
+        boolean: vero | falso
+        flag_or_all: flag | tutto
+        nation: nazione
+        amount: quantità
+        tribute: tributo
+        y-min: y-minima
+        y-max: y-massima
+        silent: silenzioso
+        sorting: ordinamento
+        number: numero
+        preparation_time: tempo_preparazione
+        category: categoria
+        ally: alleato
+        enemy: nemico
+        here: qui
+        land_or_here: terra | qui
         tag: tag
-        limit: limit
+        limit: limite
   value:
     unlimited: '&aillimitato'
     none: '&8Nessuno'
   day:
-    sunday: Sunday
-    monday: Monday
-    tuesday: Tuesday
-    wednesday: Wednesday
-    thursday: Thursday
-    friday: Friday
-    saturday: Saturday
-  combat-logout: '{player} died, because they left the server while being engaged
-    in a fight (combat-tag).'
+    sunday: Domenica
+    monday: Lunedì
+    tuesday: Martedì
+    wednesday: Mercoledì
+    thursday: Giovedì
+    friday: Venerdì
+    saturday: Sabato
+  combat-logout: '{player} è morto perché ha lasciato il server mentre era impegnato in un combattimento (combat-tag).'
 help:
   help:
     root:
@@ -384,7 +373,7 @@ help:
       leave: '[T]&e{parent} {subcmd} {args} &8- &7Abbandona una terra o un''area.[H]&7Se
         non specifichi una terra, abbandonerai l''area nella tua posizione attuale.
         &7Clicca per copiare.[/H][SC]{fullcmd}[/SC][/T]'
-      unclaim:
+            unclaim:
         main: '[T]&e{parent} {subcmd} &8- &7Abbandona un chunk[H]&7Questo supporta
           anche &e/lands selection&7. &7Clicca per eseguire.[/H][C]{fullcmd}[/C][/T]'
         auto: '[T]&e{parent} {subcmd} &8- &7Abbandona mentre ti muovi[H]&7Questo abbandonerà
